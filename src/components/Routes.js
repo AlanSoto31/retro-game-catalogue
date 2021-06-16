@@ -7,6 +7,7 @@ import AnimeDetails from './AnimeDetails';
 const Routes = () => {
     return (
         <>
+            <Navbar />
             <Switch>
                 <Route path="/" component={AnimeList} exact />
                 <Route path="/details" component={AnimeDetails} />
