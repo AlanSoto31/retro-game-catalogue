@@ -1,8 +1,13 @@
+import React from "react";
+import AnimeList from "./components/AnimeList";
+import AnimeDetails from "./components/AnimeDetails";
 
-
-function App() {
+const App = () => {
   return (
-    <h1>Hello</h1>
+    <>
+      <AnimeList />
+      <AnimeDetails />
+    </>
   );
 }
 
