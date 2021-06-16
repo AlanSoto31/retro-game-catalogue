@@ -5,8 +5,7 @@ import AnimeDetails from "./components/AnimeDetails";
 const App = () => {
   return (
     <>
-      <AnimeList />
-      <AnimeDetails />
+      <h1>App</h1>
     </>
   );
 }
