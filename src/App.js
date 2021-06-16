@@ -1,13 +1,9 @@
-import React from "react";
-import AnimeList from "./components/AnimeList";
-import AnimeDetails from "./components/AnimeDetails";
+import React from 'react';
 
-const App = () => {
-  return (
-    <>
-      <h1>App</h1>
-    </>
-  );
-}
+const App = () => (
+  <>
+    <h1>App</h1>
+  </>
+);
 
 export default App;

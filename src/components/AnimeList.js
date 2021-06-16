@@ -1,11 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-const AnimeList = () => {
-    return (
-        <div>
-            <h1>AnimeList</h1>
-        </div>
-    )
-}
+const AnimeList = () => (
+  <div>
+    <h1>AnimeList</h1>
+  </div>
+);
 
 export default AnimeList;
