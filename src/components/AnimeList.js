@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchData } from '../redux/actions/index';
 import Filter from './Filter';
+import Game from './Game';
 
 const AnimeList = () => {
   const list = useSelector((state) => state.games.list);
@@ -23,14 +24,15 @@ const AnimeList = () => {
     return r;
   };
 
-  const items = list.filter(check).map((game) => <li key={game.id}>{game.name}</li>);
+  // const items = list.filter(check).map((game) => <li key={game.id}>{game.name}</li>);
+  const items = list.filter(check).map((game) => <Game key={game.id} game={game} />);
 
   return (
     <>
       <Filter onChangeFilter={handleChangeFilter} />
-      <ul>
+      <div>
         {items}
-      </ul>
+      </div>
     </>
   );
 };
