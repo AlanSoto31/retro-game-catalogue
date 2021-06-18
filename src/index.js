@@ -7,7 +7,6 @@ import thunk from 'redux-thunk';
 import Routes from './components/Routes';
 import rootReducer from './redux/reducer/index';
 
-/* eslint-disable no-underscore-dangle */
 const store = createStore(
   rootReducer,
   compose(
@@ -15,7 +14,6 @@ const store = createStore(
     window.devToolsExtension ? window.devToolsExtension() : (f) => f,
   ),
 );
-/* eslint-enable */
 
 ReactDOM.render(
   <BrowserRouter>

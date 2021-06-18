@@ -5,7 +5,7 @@ const defaultState = {
 const filterReducer = (state = defaultState, { type, payload }) => {
   let newState;
   switch (type) {
-    case 'SHOW_CATEGORIES':
+    case 'SHOW_PLATFORMS':
       newState = { ...state, list: payload };
       return newState;
     default:

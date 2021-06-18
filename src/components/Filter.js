@@ -1,22 +1,23 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchCategories } from '../redux/actions/index';
+import { fetchPlatforms } from '../redux/actions/index';
 
 const Filter = ({ onChangeFilter }) => {
-  const categoryOptions = useSelector((state) => state.categories.list);
+  const platformOptions = useSelector((state) => state.platforms.list);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchCategories());
+    dispatch(fetchPlatforms());
   }, []);
 
-  const options = categoryOptions.map((item) => (
+  const options = platformOptions.map((item) => (
     <option key={item.id} value={item.name}>{item.name}</option>
   ));
 
   return (
     <select name="filter" required onChange={(e) => onChangeFilter(e.target.value)}>
+      <option value="ALL">All</option>
       {options}
     </select>
   );

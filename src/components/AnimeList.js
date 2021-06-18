@@ -1,22 +1,29 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchData } from '../redux/actions/index';
 import Filter from './Filter';
 
 const AnimeList = () => {
   const list = useSelector((state) => state.games.list);
+  const [cat, setCat] = useState('ALL');
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchData());
-    // dispatch(fetchCategories());
   }, []);
 
   const handleChangeFilter = (value) => {
-    console.log(value);
+    setCat(value);
   };
 
-  const items = list.map((game) => <li key={game.id}>{game.name}</li>);
+  const check = (game) => {
+    let r;
+    const platTrue = game.platforms.filter((plat) => plat.name === cat || cat === 'ALL');
+    if (platTrue.length) r = game;
+    return r;
+  };
+
+  const items = list.filter(check).map((game) => <li key={game.id}>{game.name}</li>);
 
   return (
     <>

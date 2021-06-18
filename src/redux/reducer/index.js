@@ -4,7 +4,7 @@ import gamesReducer from './gamesReducer';
 
 const rootReducer = combineReducers({
   games: gamesReducer,
-  categories: filterReducer,
+  platforms: filterReducer,
 });
 
 export default rootReducer;
