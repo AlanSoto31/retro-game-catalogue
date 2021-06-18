@@ -6,7 +6,7 @@ const Game = ({ game }) => (
   <div>
     <h3>{game.name}</h3>
     <button type="button">
-      <Link to={`/${game.id}`}>
+      <Link to={`/${game.guid}`}>
         See details ...
       </Link>
     </button>

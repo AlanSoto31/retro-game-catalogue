@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchData } from '../redux/actions/index';
+import { fetchGameList } from '../redux/actions/index';
 import Filter from './Filter';
 import Game from './Game';
 
@@ -10,7 +10,7 @@ const AnimeList = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchData());
+    dispatch(fetchGameList());
   }, []);
 
   const handleChangeFilter = (value) => {

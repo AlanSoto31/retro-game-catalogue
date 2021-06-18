@@ -1,18 +1,21 @@
-import React from 'react';
-// import PropTypes from 'prop-types'
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { fetchGameDetails } from '../redux/actions';
 
 const GameDet = () => {
-  const { id } = useParams();
+  const { guid } = useParams();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchGameDetails(guid));
+  }, []);
+
   return (
     <div>
-      <h1>{id}</h1>
+      <h1>{guid}</h1>
     </div>
   );
 };
-
-/* GameDet.propTypes = {
-
-} */
 
 export default GameDet;

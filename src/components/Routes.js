@@ -11,7 +11,7 @@ const Routes = () => (
     <Switch>
       <Route path="/" component={AnimeList} exact />
       <Route path="/details" component={AnimeDetails} />
-      <Route path="/:id" component={GameDet} />
+      <Route path="/:guid" component={GameDet} />
       <Route component={Error} />
     </Switch>
   </>

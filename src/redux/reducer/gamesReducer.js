@@ -1,5 +1,6 @@
 const defaultState = {
   list: [{ id: 1, name: 'Banjo Kazoe', platforms: [{ name: 'Nintendo' }, { name: 'Cubo' }] }, { id: 2, name: 'Golden eye', platforms: [{ name: 'Nintendo' }, { name: 'Cubo' }] }],
+  details: [{ id: 1, name: 'Banjo Kazoe', platforms: [{ name: 'Nintendo' }, { name: 'Cubo' }] }],
 };
 
 const gamesReducer = (state = defaultState, { type, payload }) => {
@@ -7,6 +8,9 @@ const gamesReducer = (state = defaultState, { type, payload }) => {
   switch (type) {
     case 'SHOW_GAMES':
       newState = { ...state, list: payload };
+      return newState;
+    case 'SHOW_GAME_DETAILS':
+      newState = { ...state, details: payload };
       return newState;
     default:
       return state;
