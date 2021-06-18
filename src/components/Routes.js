@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import Navbar from './Navbar';
 import AnimeList from './AnimeList';
 import AnimeDetails from './AnimeDetails';
+import GameDet from './GameDet';
 
 const Routes = () => (
   <>
@@ -10,6 +11,7 @@ const Routes = () => (
     <Switch>
       <Route path="/" component={AnimeList} exact />
       <Route path="/details" component={AnimeDetails} />
+      <Route path="/:id" component={GameDet} />
       <Route component={Error} />
     </Switch>
   </>

@@ -24,7 +24,6 @@ const AnimeList = () => {
     return r;
   };
 
-  // const items = list.filter(check).map((game) => <li key={game.id}>{game.name}</li>);
   const items = list.filter(check).map((game) => <Game key={game.id} game={game} />);
 
   return (

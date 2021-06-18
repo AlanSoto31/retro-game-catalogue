@@ -1,10 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Game = ({ game }) => (
   <div>
     <h3>{game.name}</h3>
-    <button type="button">see details...</button>
+    <button type="button">
+      <Link to={`/${game.id}`}>
+        See details ...
+      </Link>
+    </button>
   </div>
 );
 
