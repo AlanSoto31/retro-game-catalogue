@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import Spinner from 'react-bootstrap/Spinner';
 import { fetchGameList } from '../redux/actions/index';
 import Filter from './Filter';
 import Game from './Game';
 
 const GameList = () => {
   const list = useSelector((state) => state.games.list);
+  const loading = useSelector((state) => state.games.loading);
   const [cat, setCat] = useState('ALL');
   const dispatch = useDispatch();
 
@@ -31,9 +33,12 @@ const GameList = () => {
   return (
     <>
       <Filter onChangeFilter={handleChangeFilter} />
-      <div>
-        {items}
-      </div>
+      {loading ? items : (
+        <Spinner
+          animation="border"
+          role="status"
+        />
+      )}
     </>
   );
 };

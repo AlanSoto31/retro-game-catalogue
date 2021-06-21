@@ -13,8 +13,14 @@ export const showGameDetails = (game) => ({
   payload: game,
 });
 
+export const setLoading = (val) => ({
+  type: 'SET_LOADING',
+  payload: val,
+});
+
 export const fetchGameList = () => async (dispatch) => {
   const games = await fetch('https://frozen-shelf-35879.herokuapp.com/https://www.giantbomb.com/api/games/?api_key=a49d1e3f0d18a6120a595dd1d2b6d2f4c8278c5b&format=json&limit=2&field_list=image,name,platforms,guid').then((res) => res.json());
+  dispatch(setLoading(true));
   dispatch(showGames(games.results));
 };
 
