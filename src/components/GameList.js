@@ -4,7 +4,7 @@ import { fetchGameList } from '../redux/actions/index';
 import Filter from './Filter';
 import Game from './Game';
 
-const AnimeList = () => {
+const GameList = () => {
   const list = useSelector((state) => state.games.list);
   const [cat, setCat] = useState('ALL');
   const dispatch = useDispatch();
@@ -36,4 +36,4 @@ const AnimeList = () => {
   );
 };
 
-export default AnimeList;
+export default GameList;
