@@ -24,7 +24,9 @@ const GameList = () => {
     return r;
   };
 
-  const items = list.filter(check).map((game) => <Game key={game.id} game={game} />);
+  const items = list.filter(check).map(
+    (game) => <Game key={game.guid} game={game} />,
+  );
 
   return (
     <>

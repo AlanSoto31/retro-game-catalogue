@@ -1,5 +1,9 @@
 const defaultState = {
-  list: [{ id: 1, name: 'Banjo Kazoe', platforms: [{ name: 'Nintendo' }, { name: 'Cubo' }] }, { id: 2, name: 'Golden eye', platforms: [{ name: 'Nintendo' }, { name: 'Cubo' }] }],
+  list: [{
+    id: 1, name: 'Banjo Kazoe', platforms: [{ name: 'Nintendo' }, { name: 'Cubo' }], image: { icon_url: 'fuckyou' },
+  }, {
+    id: 2, name: 'Golden eye', platforms: [{ name: 'Nintendo' }, { name: 'Cubo' }], image: { icon_url: 'fuckyou' },
+  }],
   details: [{ id: 1, name: 'Banjo Kazoe', platforms: [{ name: 'Nintendo' }, { name: 'Cubo' }] }],
 };
 

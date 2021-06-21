@@ -14,7 +14,7 @@ export const showGameDetails = (game) => ({
 });
 
 export const fetchGameList = () => async (dispatch) => {
-  const games = await fetch('https://frozen-shelf-35879.herokuapp.com/https://www.giantbomb.com/api/games/?api_key=a49d1e3f0d18a6120a595dd1d2b6d2f4c8278c5b&format=json&limit=50&field_list=image,guid,name,platforms').then((res) => res.json());
+  const games = await fetch('https://frozen-shelf-35879.herokuapp.com/https://www.giantbomb.com/api/games/?api_key=a49d1e3f0d18a6120a595dd1d2b6d2f4c8278c5b&format=json&limit=2&field_list=image,name,platforms,guid').then((res) => res.json());
   dispatch(showGames(games.results));
 };
 
