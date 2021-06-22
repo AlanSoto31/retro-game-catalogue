@@ -1,11 +1,26 @@
 const defaultState = {
   loading: false,
   list: [{
-    id: 1, name: 'Banjo Kazoe', platforms: [{ name: 'Nintendo' }, { name: 'Cubo' }], image: { icon_url: 'fuckyou' },
+    id: 1, name: 'Banjo Kazoe', platforms: [{ name: 'Nintendo' }, { name: 'Cubo' }], image: { icon_url: '' },
   }, {
-    id: 2, name: 'Golden eye', platforms: [{ name: 'Nintendo' }, { name: 'Cubo' }], image: { icon_url: 'fuckyou' },
+    id: 2, name: 'Golden eye', platforms: [{ name: 'Nintendo' }, { name: 'Cubo' }], image: { icon_url: '' },
   }],
-  details: [{ id: 1, name: 'Banjo Kazoe', platforms: [{ name: 'Nintendo' }, { name: 'Cubo' }] }],
+  details:
+    {
+      deck: '',
+      name: '',
+      platforms: [
+        { name: '' },
+        { name: '' },
+      ],
+      image: {
+        super_url: '',
+        original_url: '',
+      },
+      developers: [{ name: '' }, { name: '' }],
+      genres: [{ name: '' }, { name: '' }],
+    },
+  original_release_date: '',
 };
 
 const gamesReducer = (state = defaultState, { type, payload }) => {
