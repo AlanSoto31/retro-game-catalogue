@@ -1,20 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
 
 const Game = ({ game }) => (
-  <div className="col mb-4">
-    <div className="card h-100">
-      <img className="card-img-top gameList-card-img" src={game.image.medium_url} alt="Card cap" />
-      <div className="card-body d-flex flex-column">
-        <h4 className="card-title cardTitle">{game.name}</h4>
-        <Link className="btn btn-info mt-auto" to={`/${game.guid}`}>
-          Details...
-        </Link>
-      </div>
-    </div>
-  </div>
-
+  <Col sm={12} md={6} lg={4} className="mb-4">
+    <Card className="h-100">
+      <Card.Img variant="top" className="gameList-card-img" src={game.image.medium_url} />
+      <Card.Body className="d-flex flex-column justify-content-end">
+        <Card.Title className="font-weight-bold">
+          <Link className="card-title cardTitle" to={`/${game.guid}`}>
+            {game.name}
+          </Link>
+        </Card.Title>
+      </Card.Body>
+    </Card>
+  </Col>
 );
 
 Game.propTypes = {

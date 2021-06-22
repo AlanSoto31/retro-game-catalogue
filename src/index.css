@@ -1,7 +1,14 @@
 .gameList-card-img {
-    height: 200px;
+    height: 350px;
 }
 
 .cardTitle {
+    color: black;
     font-size: 18px;
+    font-weight: bold;
 }
+
+.cardTitle:hover {
+    color: orange;
+    text-decoration: none;
+  }

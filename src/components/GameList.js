@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Spinner from 'react-bootstrap/Spinner';
+import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import { fetchGameList } from '../redux/actions/index';
 import Filter from './Filter';
@@ -35,7 +36,7 @@ const GameList = () => {
     <>
       <Container className="mt-4">
         <Filter onChangeFilter={handleChangeFilter} />
-        <div className="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
+        <Row className="g-4">
           {loading ? items : (
             <div className="col">
               <Spinner
@@ -44,7 +45,7 @@ const GameList = () => {
               />
             </div>
           )}
-        </div>
+        </Row>
       </Container>
     </>
   );
