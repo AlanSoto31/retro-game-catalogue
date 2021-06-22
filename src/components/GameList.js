@@ -33,7 +33,7 @@ const GameList = () => {
 
   return (
     <>
-      <Container>
+      <Container className="mt-4">
         <Filter onChangeFilter={handleChangeFilter} />
         <div className="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
           {loading ? items : (

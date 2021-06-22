@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Form } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchPlatforms } from '../redux/actions/index';
@@ -16,10 +17,15 @@ const Filter = ({ onChangeFilter }) => {
   ));
 
   return (
-    <select name="filter" required onChange={(e) => onChangeFilter(e.target.value)}>
-      <option value="ALL">All</option>
-      {options}
-    </select>
+    <div className="my-4 d-flex justify-content-end">
+      <div className="w-50">
+        <Form.Label>Find by your prefer platform</Form.Label>
+        <Form.Control className="w-100" as="select" required onChange={(e) => onChangeFilter(e.target.value)}>
+          <option value="ALL">All</option>
+          {options}
+        </Form.Control>
+      </div>
+    </div>
   );
 };
 
