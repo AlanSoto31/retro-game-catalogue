@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Spinner from 'react-bootstrap/Spinner';
 import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import { fetchGameList } from '../redux/actions/index';
 import Filter from './Filter';
@@ -38,12 +39,12 @@ const GameList = () => {
         <Filter onChangeFilter={handleChangeFilter} />
         <Row className="g-4">
           {loading ? items : (
-            <div className="col">
+            <Col className="d-flex justify-content-center">
               <Spinner
                 animation="border"
                 role="status"
               />
-            </div>
+            </Col>
           )}
         </Row>
       </Container>
