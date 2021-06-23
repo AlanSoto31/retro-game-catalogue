@@ -1,9 +1,9 @@
 const defaultState = {
   loading: false,
   list: [{
-    id: 1, name: 'Banjo Kazoe', platforms: [{ name: 'Nintendo' }, { name: 'Cubo' }], image: { icon_url: '' },
+    id: 1, name: '', platforms: [{ name: '' }, { name: '' }], image: { icon_url: '' },
   }, {
-    id: 2, name: 'Golden eye', platforms: [{ name: 'Nintendo' }, { name: 'Cubo' }], image: { icon_url: '' },
+    id: 2, name: '', platforms: [{ name: '' }, { name: '' }], image: { icon_url: '' },
   }],
   details:
     {

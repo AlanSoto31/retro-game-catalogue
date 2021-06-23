@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Navbar from './Navbar';
 import GameList from './GameList';
-import GameDet from './GameDet';
+import GameDet from '../components/GameDet';
 
 const Routes = () => (
   <>

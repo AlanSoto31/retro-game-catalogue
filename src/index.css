@@ -33,3 +33,7 @@ body {
   color: #d35400;
   text-decoration: none;
 }
+
+.spinner {
+  color: white;
+}

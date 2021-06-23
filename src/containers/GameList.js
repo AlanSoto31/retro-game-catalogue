@@ -5,8 +5,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import { fetchGameList } from '../redux/actions/index';
-import Filter from './Filter';
-import Game from './Game';
+import Filter from '../components/Filter';
+import Game from '../components/Game';
 
 const GameList = () => {
   const list = useSelector((state) => state.games.list);
@@ -39,7 +39,7 @@ const GameList = () => {
         <Filter onChangeFilter={handleChangeFilter} />
         <Row className="g-4">
           {loading ? items : (
-            <Col className="d-flex justify-content-center">
+            <Col className="d-flex justify-content-center spinner">
               <Spinner
                 animation="border"
                 role="status"
