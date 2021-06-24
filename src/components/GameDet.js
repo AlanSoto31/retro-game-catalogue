@@ -26,7 +26,7 @@ const GameDet = () => {
     )
   ));
 
-  const gens = gameDetails.developers.map((gen, index) => (
+  const gens = gameDetails.genres.map((gen, index) => (
     index === 0 ? <span className="p-2" key={gen.id}>{gen.name}</span> : (
       <span key={gen.id}>
         <span className="p-2">|</span>
@@ -34,7 +34,7 @@ const GameDet = () => {
       </span>
     )
   ));
-  const plats = gameDetails.developers.map((plat, index) => (
+  const plats = gameDetails.platforms.map((plat, index) => (
     index === 0 ? <span className="p-2" key={plat.id}>{plat.name}</span> : (
       <span key={plat.id}>
         <span className="p-2">|</span>

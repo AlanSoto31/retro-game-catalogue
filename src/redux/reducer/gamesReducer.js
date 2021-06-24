@@ -1,9 +1,9 @@
 const defaultState = {
   loading: false,
   list: [{
-    id: 1, name: '', platforms: [{ name: '' }, { name: '' }], image: { icon_url: '' },
+    guid: 1, name: '', platforms: [{ name: '' }, { name: '' }], image: { icon_url: '' },
   }, {
-    id: 2, name: '', platforms: [{ name: '' }, { name: '' }], image: { icon_url: '' },
+    guid: 2, name: '', platforms: [{ name: '' }, { name: '' }], image: { icon_url: '' },
   }],
   details:
     {
@@ -19,8 +19,8 @@ const defaultState = {
       },
       developers: [{ name: '' }, { name: '' }],
       genres: [{ name: '' }, { name: '' }],
+      original_release_date: '',
     },
-  original_release_date: '',
 };
 
 const gamesReducer = (state = defaultState, { type, payload }) => {

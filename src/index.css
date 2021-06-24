@@ -37,3 +37,9 @@ body {
 .spinner {
   color: white;
 }
+
+.filter-label {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}

@@ -9,7 +9,7 @@ const Routes = () => (
     <Navbar />
     <Switch>
       <Route path="/" component={GameList} exact />
-      <Route path="/:guid" component={GameDet} />
+      <Route path="/:guid" exact component={GameDet} />
       <Route component={Error} />
     </Switch>
   </>
