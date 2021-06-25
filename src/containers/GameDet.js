@@ -18,8 +18,8 @@ const GameDet = () => {
   }, []);
 
   const devs = details.developers.map((dev, index) => (
-    index === 0 ? <span className="p-2" key={dev.id}>{dev.name}</span> : (
-      <span key={dev.id}>
+    index === 0 ? <span className="p-2" key={Math.random()}>{dev.name}</span> : (
+      <span key={Math.random()}>
         <span className="p-2">|</span>
         {dev.name}
       </span>
@@ -27,16 +27,16 @@ const GameDet = () => {
   ));
 
   const gens = details.genres.map((gen, index) => (
-    index === 0 ? <span className="p-2" key={gen.id}>{gen.name}</span> : (
-      <span key={gen.id}>
+    index === 0 ? <span className="p-2" key={Math.random()}>{gen.name}</span> : (
+      <span key={Math.random()}>
         <span className="p-2">|</span>
         {gen.name}
       </span>
     )
   ));
   const plats = details.platforms.map((plat, index) => (
-    index === 0 ? <span className="p-2" key={plat.id}>{plat.name}</span> : (
-      <span key={plat.id}>
+    index === 0 ? <span className="p-2" key={Math.random()}>{plat.name}</span> : (
+      <span key={Math.random()}>
         <span className="p-2">|</span>
         {plat.name}
       </span>

@@ -20,7 +20,7 @@ const Filter = ({ onChangeFilter }) => {
     return (
       <div className="my-4 d-flex justify-content-end">
         <div className="w-50">
-          <Form.Label for="filter" className="filter-label">Find by your prefer platform</Form.Label>
+          <Form.Label htmlFor="filter" className="filter-label">Find by your prefer platform</Form.Label>
           <Form.Control id="filter" className="w-100" as="select" name="filter" placeholder="Select an option" required onChange={(e) => onChangeFilter(e.target.value)}>
             <option value="ALL">All</option>
             {options}

@@ -20,7 +20,17 @@ const Game = ({ game }) => (
 );
 
 Game.propTypes = {
-  game: PropTypes.objectOf.isRequired,
+  game: PropTypes.shape({
+    guid: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+    ]),
+    name: PropTypes.string,
+    platforms: PropTypes.arrayOf(PropTypes.objectOf),
+    image: PropTypes.shape({
+      medium_url: PropTypes.string,
+    }),
+  }).isRequired,
 };
 
 export default Game;
