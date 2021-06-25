@@ -2,7 +2,7 @@ import React from 'react';
 import '@testing-library/jest-dom/extend-expect';
 import { fireEvent, render } from '@testing-library/react';
 import * as reactRedux from 'react-redux';
-import Filter from '../components/Filter';
+import Filter from '../containers/Filter';
 
 describe('<Filter />', () => {
   const useSelectorMock = jest.spyOn(reactRedux, 'useSelector');

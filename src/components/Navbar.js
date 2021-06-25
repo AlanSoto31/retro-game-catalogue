@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
-import Axo from '../components/Axo';
+import Axo from './Axo';
 
 const Navbar = () => (
   <Nav className="navbar navbar-light bg-light d-flex justify-content-even align-content-center">

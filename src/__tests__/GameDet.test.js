@@ -3,7 +3,7 @@ import '@testing-library/jest-dom/extend-expect';
 import { render } from '@testing-library/react';
 import * as reactRedux from 'react-redux';
 import ReactRouter from 'react-router';
-import GameDet from '../components/GameDet';
+import GameDet from '../containers/GameDet';
 
 describe('<GameDet/>', () => {
   const useSelectorMock = jest.spyOn(reactRedux, 'useSelector');

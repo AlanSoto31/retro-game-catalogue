@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import { fetchGameList } from '../redux/actions/index';
-import Filter from '../components/Filter';
+import Filter from './Filter';
 import Game from '../components/Game';
 
 const GameList = () => {
