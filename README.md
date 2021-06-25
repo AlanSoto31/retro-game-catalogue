@@ -9,7 +9,7 @@
 <p align="center">
   <strong>Made by Alan Soto</strong>
   <br>
-  Come back to the '80s and '90s with this Retro game finder,  where you might filter games by platform, in which the game runs. For example, Atari, Genesis, SEGA, SNES, etc.  Click on the title to get a detailed product page. If you recognize some of these games, let me tell you that we are getting old. This project is powered by www.giantbomb.com. 
+   Come back to the '80s and '90s with this Retro game finder,  where you might filter games by platform, in which the game runs. For example, Atari, Genesis, SEGA, SNES, etc.  Click on the title to get a detailed product page. If you recognize some of these games, let me tell you that we are getting old. This project is powered by www.giantbomb.com. This app was developed based on Catalogue of Dog clothes project requirements from Microverse.
 </p>
 
 ![screenshot](./public/screenshot.png)
