@@ -12,6 +12,7 @@ const GameDet = () => {
   const { guid } = useParams();
   const dispatch = useDispatch();
   const gameDetails = useSelector((state) => state.games.details);
+  const error = useSelector((state) => state.games.error);
 
   useEffect(() => {
     dispatch(fetchGameDetails(guid));
@@ -43,39 +44,42 @@ const GameDet = () => {
     )
   ));
 
-  return (
-    <Container>
-      <Card className="mb-3 mt-5">
-        <Row className="g-0">
-          <Col md={4}>
-            <Card.Img variant="top" src={gameDetails.image.super_url} />
-          </Col>
-          <Col md={8}>
-            <Card.Body>
-              <Card.Title className="font-weight-bold">{gameDetails.name}</Card.Title>
-              <Card.Text>{gameDetails.deck}</Card.Text>
-              <div>
-                <span className="font-weight-bold">DEVELOPER:</span>
-                {devs}
-              </div>
-              <div className="mt-2">
-                <span className="font-weight-bold">GENRE:</span>
-                {gens}
-              </div>
-              <div className="mt-2">
-                <span className="font-weight-bold">PLATFORM:</span>
-                {plats}
-              </div>
-              <div className="mt-2">
-                <span className="font-weight-bold">REALESE DATE:</span>
-                <span className="p-2">{gameDetails.original_release_date}</span>
-              </div>
-            </Card.Body>
-          </Col>
-        </Row>
-      </Card>
-    </Container>
-  );
+  if (!error) {
+    return (
+      <Container>
+        <Card className="mb-3 mt-5">
+          <Row className="g-0">
+            <Col md={4}>
+              <Card.Img variant="top" src={gameDetails.image.super_url} />
+            </Col>
+            <Col md={8}>
+              <Card.Body>
+                <Card.Title className="font-weight-bold">{gameDetails.name}</Card.Title>
+                <Card.Text>{gameDetails.deck}</Card.Text>
+                <div>
+                  <span className="font-weight-bold">DEVELOPER:</span>
+                  {devs}
+                </div>
+                <div className="mt-2">
+                  <span className="font-weight-bold">GENRE:</span>
+                  {gens}
+                </div>
+                <div className="mt-2">
+                  <span className="font-weight-bold">PLATFORM:</span>
+                  {plats}
+                </div>
+                <div className="mt-2">
+                  <span className="font-weight-bold">REALESE DATE:</span>
+                  <span className="p-2">{gameDetails.original_release_date}</span>
+                </div>
+              </Card.Body>
+            </Col>
+          </Row>
+        </Card>
+      </Container>
+    );
+  }
+  return <h1 className="mt-5 text-white d-flex justify-content-center">{error}</h1>;
 };
 
 export default GameDet;

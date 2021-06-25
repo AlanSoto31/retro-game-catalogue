@@ -11,6 +11,7 @@ import Game from '../components/Game';
 const GameList = () => {
   const list = useSelector((state) => state.games.list);
   const loading = useSelector((state) => state.games.loading);
+  const error = useSelector((state) => state.games.error);
   const [cat, setCat] = useState('ALL');
   const dispatch = useDispatch();
 
@@ -33,23 +34,26 @@ const GameList = () => {
     (game) => <Game key={game.guid} game={game} />,
   );
 
-  return (
-    <>
-      <Container className="mt-4">
-        <Filter onChangeFilter={handleChangeFilter} />
-        <Row className="g-4">
-          {loading ? items : (
-            <Col className="d-flex justify-content-center spinner">
-              <Spinner
-                animation="border"
-                role="status"
-              />
-            </Col>
-          )}
-        </Row>
-      </Container>
-    </>
-  );
+  if (!error) {
+    return (
+      <>
+        <Container className="mt-4">
+          <Filter onChangeFilter={handleChangeFilter} />
+          <Row className="g-4">
+            { loading ? items : (
+              <Col className="d-flex justify-content-center spinner">
+                <Spinner
+                  animation="border"
+                  role="status"
+                />
+              </Col>
+            ) }
+          </Row>
+        </Container>
+      </>
+    );
+  }
+  return <h1 className="mt-5 text-white d-flex justify-content-center">{error}</h1>;
 };
 
 export default GameList;

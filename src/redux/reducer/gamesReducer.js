@@ -21,6 +21,7 @@ const defaultState = {
       genres: [{ name: '' }, { name: '' }],
       original_release_date: '',
     },
+  error: null,
 };
 
 const gamesReducer = (state = defaultState, { type, payload }) => {
@@ -34,6 +35,9 @@ const gamesReducer = (state = defaultState, { type, payload }) => {
       return newState;
     case 'SET_LOADING':
       newState = { ...state, loading: payload };
+      return newState;
+    case 'SHOW_ERROR':
+      newState = { ...state, error: payload };
       return newState;
     default:
       return state;
