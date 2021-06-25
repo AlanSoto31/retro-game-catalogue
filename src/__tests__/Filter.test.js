@@ -7,7 +7,10 @@ import Filter from '../components/Filter';
 describe('<Filter />', () => {
   const useSelectorMock = jest.spyOn(reactRedux, 'useSelector');
   const useDispatchMock = jest.spyOn(reactRedux, 'useDispatch');
-  const plats = [{ id: 1, name: 'Game Boy' }, { id: 2, name: 'Game Boy Advance' }];
+  const plats = {
+    list: [{ id: 1, name: 'Game Boy' }, { id: 2, name: 'Game Boy Advance' }],
+    error: null,
+  };
   let component;
   const mockHandler = jest.fn();
   const dummyDispatch = jest.fn();

@@ -5,15 +5,14 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchPlatforms } from '../redux/actions/index';
 
 const Filter = ({ onChangeFilter }) => {
-  const platformOptions = useSelector((state) => state.platforms.list);
-  const error = useSelector((state) => state.platforms.error);
+  const { list, error } = useSelector((state) => state.platforms);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchPlatforms());
   }, []);
 
-  const options = platformOptions.map((item) => (
+  const options = list.map((item) => (
     <option key={item.id} value={item.name}>{item.name}</option>
   ));
 

@@ -12,27 +12,30 @@ describe('<GameDet/>', () => {
   const dummyDispatch = jest.fn();
 
   let component;
-  const gameDetails = {
-    deck: 'Banjo Kazoie',
-    name: '',
-    platforms: [
-      { name: '' },
-      { name: '' },
-    ],
-    image: {
-      super_url: '',
-      original_url: '',
+  const game = {
+    details: {
+      deck: 'Banjo Kazoie',
+      name: '',
+      platforms: [
+        { name: '' },
+        { name: '' },
+      ],
+      image: {
+        super_url: '',
+        original_url: '',
+      },
+      developers: [{ name: '' }, { name: '' }],
+      genres: [{ name: '' }, { name: '' }],
+      original_release_date: '',
     },
-    developers: [{ name: '' }, { name: '' }],
-    genres: [{ name: '' }, { name: '' }],
-    original_release_date: '',
+    error: null,
   };
 
   beforeEach(() => {
     useSelectorMock.mockClear();
     useDispatchMock.mockClear();
     useParamsMock.mockClear();
-    useSelectorMock.mockReturnValue(gameDetails);
+    useSelectorMock.mockReturnValue(game);
     useDispatchMock.mockReturnValue(dummyDispatch);
     useParamsMock.mockReturnValue({ guid: '3050' });
     component = render(

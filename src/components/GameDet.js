@@ -11,14 +11,13 @@ import { fetchGameDetails } from '../redux/actions';
 const GameDet = () => {
   const { guid } = useParams();
   const dispatch = useDispatch();
-  const gameDetails = useSelector((state) => state.games.details);
-  const error = useSelector((state) => state.games.error);
+  const { details, error } = useSelector((state) => state.games);
 
   useEffect(() => {
     dispatch(fetchGameDetails(guid));
   }, []);
 
-  const devs = gameDetails.developers.map((dev, index) => (
+  const devs = details.developers.map((dev, index) => (
     index === 0 ? <span className="p-2" key={dev.id}>{dev.name}</span> : (
       <span key={dev.id}>
         <span className="p-2">|</span>
@@ -27,7 +26,7 @@ const GameDet = () => {
     )
   ));
 
-  const gens = gameDetails.genres.map((gen, index) => (
+  const gens = details.genres.map((gen, index) => (
     index === 0 ? <span className="p-2" key={gen.id}>{gen.name}</span> : (
       <span key={gen.id}>
         <span className="p-2">|</span>
@@ -35,7 +34,7 @@ const GameDet = () => {
       </span>
     )
   ));
-  const plats = gameDetails.platforms.map((plat, index) => (
+  const plats = details.platforms.map((plat, index) => (
     index === 0 ? <span className="p-2" key={plat.id}>{plat.name}</span> : (
       <span key={plat.id}>
         <span className="p-2">|</span>
@@ -50,12 +49,12 @@ const GameDet = () => {
         <Card className="mb-3 mt-5">
           <Row className="g-0">
             <Col md={4}>
-              <Card.Img variant="top" src={gameDetails.image.super_url} />
+              <Card.Img variant="top" src={details.image.super_url} />
             </Col>
             <Col md={8}>
               <Card.Body>
-                <Card.Title className="font-weight-bold">{gameDetails.name}</Card.Title>
-                <Card.Text>{gameDetails.deck}</Card.Text>
+                <Card.Title className="font-weight-bold">{details.name}</Card.Title>
+                <Card.Text>{details.deck}</Card.Text>
                 <div>
                   <span className="font-weight-bold">DEVELOPER:</span>
                   {devs}
@@ -70,7 +69,7 @@ const GameDet = () => {
                 </div>
                 <div className="mt-2">
                   <span className="font-weight-bold">REALESE DATE:</span>
-                  <span className="p-2">{gameDetails.original_release_date}</span>
+                  <span className="p-2">{details.original_release_date}</span>
                 </div>
               </Card.Body>
             </Col>

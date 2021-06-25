@@ -20,7 +20,7 @@ export const setLoading = (val) => ({
 
 export const showError = (e) => ({
   type: 'SHOW_ERROR',
-  payload: `Something went wrong loading game component${e}`,
+  payload: `Something went wrong loading game list component${e}`,
 });
 
 export const showPlatError = (e) => ({
