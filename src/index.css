@@ -1,0 +1,45 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: url('https://imgix.bustle.com/uploads/shutterstock/2020/7/2/9cb85b0e-466b-4fe1-b8c0-932a3a090195-shutterstock-1355834585.jpg?w=2000&h=1090&fit=crop&crop=faces&auto=format%2Ccompress&blend=000000&blendAlpha=45&blendMode=normal') no-repeat center center fixed;
+  background-size: cover;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display&display=swap');
+
+.main-title {
+  font-family: 'Big Shoulders Stencil Display', cursive;
+  font-size: 50px;
+}
+
+.nav-home {
+  font-size: 30px;
+}
+
+.gameList-card-img {
+  height: 350px;
+}
+
+.cardTitle {
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.cardTitle:hover,
+.nav-home:hover {
+  color: #d35400;
+  text-decoration: none;
+}
+
+.spinner {
+  color: white;
+}
+
+.filter-label {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}

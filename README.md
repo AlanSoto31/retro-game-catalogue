@@ -1,70 +1,119 @@
-# Getting Started with Create React App
+<p align="center">
+  <a href="https://github.com/jcy2704/oop-ruby">
+    <img src="https://res.cloudinary.com/growsurf-prod/image/upload/v1582211139/production/gnysw2objzekbagrqiax.png" alt="Logo" width="350" height="70">
+  </a>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">Axo Retro Game App</h1>
 
-## Available Scripts
+<p align="center">
+  <strong>Made by Alan Soto</strong>
+  <br>
+   Come back to the '80s and '90s with this Retro game finder,  where you might filter games by platform, in which the game runs. For example, Atari, Genesis, SEGA, SNES, etc.  Click on the title to get a detailed product page. If you recognize some of these games, let me tell you that we are getting old. This project is powered by www.giantbomb.com. This app was developed based on Catalogue of Dog clothes project requirements from Microverse.
+</p>
 
-In the project directory, you can run:
+![screenshot](./public/screenshot.png)
 
-### `yarn start`
+<hr>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<p align="center">
+  <a href="https://github.com/AlanSoto31/retro-game-catalogue/issues">
+    <img src="https://img.shields.io/badge/REPORT%20A%20BUG-purple?style=for-the-badge">
+  </a>
+   ‎ ‎ ‎ ‎
+  <a href="https://github.com/AlanSoto31/retro-game-catalogue/issues">
+    <img src="https://img.shields.io/badge/Request%20a%20feature-purple?style=for-the-badge">
+  </a>
+</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<hr>
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Table of Contents
 
-### `yarn build`
+- [Live Demo](#Live-Demo)
+- [Built With](#built-With)
+- [🖥️ Getting Started](#getting-Started)
+  - [Prerequisites](#prerequisites)
+  - [Setup](#setup)
+  - [Testing](#testing)
+- [👥 Author](#author)
+- [🤝 Contributing](#contributing)
+- [⭐ Show your support](#show-your-support)
+- [Acknowledgments](#acknowledgments)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Live Demo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[Live version](https://axo-retro-games.herokuapp.com/)
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Built With
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- JavaScript
+- React
+- Redux
+- Bootstrap
+- Jest
+- VS Code
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Getting Started
 
-## Learn More
+Get a local copy, type on console...
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+````
+ $ cd <'the location yo want to save the project'>
+ $ git clone https://github.com/AlanSoto31/retro-game-catalogue.git
+ ````
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+### Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- nodejs 14.16.0
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Setup
 
-### Making a Progressive Web App
+1. Go inside the project folder: `cd retro-game-catalogue`.
+2. Install dependencies: `npm install`.
+4. Start the application: `npm run start`
+5. Wait for the server to launch the app.
+6. Stop the application: `ctrl + c`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+### Testing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Go inside the project folder: `cd retro-game-catalogue`.
+2. Run the test: `npm run test`.
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Author
 
-### `yarn build` fails to minify
+👤 **Alan Soto**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- GitHub: [@AlanSoto31](https://github.com/AlanSoto31)
+- Twitter: [@Alan_Soto31](https://twitter.com/Alan_Soto31)
+- LinkedIn: [Alan Soto](https://www.linkedin.com/in/alan-soto-valle/)
+
+
+## Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/AlanSoto31/retro-game-catalogue/issues).
+
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+
+## Acknowledgments
+
+- [Microverse](https://www.microverse.org/)
+
+
+## 📝 License
+
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
